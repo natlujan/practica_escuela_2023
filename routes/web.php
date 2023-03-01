@@ -18,5 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('alumnos', [AlumnosController::class,'index'])
+Route::get('/alumnos', [AlumnosController::class,'index'])
         ->name('alumnos.index');
+
+//Create - Formulario de creacion
+Route::get('/alumnos/create', [AlumnosController::class,'create'])
+        ->name('alumnos.create');
